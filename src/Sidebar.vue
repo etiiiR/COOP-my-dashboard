@@ -146,6 +146,7 @@ body {
 }
 
 .sidebar-nav>.sidebar-brand {
+  z-index: 9999;
   height: 65px;
   font-size: 18px;
   line-height: 60px;
@@ -192,6 +193,7 @@ body {
 }
 
 #menu-toggle {
+  z-index: 0;
     cursor:pointer ;
     border:0 none;
 }

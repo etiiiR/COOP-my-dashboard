@@ -73,9 +73,10 @@ html {
     margin-bottom: 60px;
   }
   .footer {
+    padding: 0;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 95%;
     /* Set the fixed height of the footer here */
     height: 0px;
     line-height: 60px; /* Vertically center the text there */
@@ -94,4 +95,12 @@ html {
   
 
  </style>
+
+ <style scoped>
+ html, body {
+  height: 100%;
+  overflow: hidden;
+}
+ </style>
+ 
  

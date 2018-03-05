@@ -65,6 +65,8 @@ body{
   }
 
 #navbar{
+      border-top: solid 1px rgb(240,240,240);
+      border-left: solid 0px rgb(240,240,240);
       background-color: white;
       border-bottom: solid 1px rgb(240,240,240);
       height: 66px;
