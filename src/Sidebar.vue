@@ -102,7 +102,7 @@ body {
 }
 
 #page-content-wrapper {
-  background-color: rgb(248, 248, 248);
+  background-color: rgb(249, 249, 249);
   width: 100%;
   position: absolute;
   padding: 15px;
@@ -129,14 +129,14 @@ body {
 
 .sidebar-nav li {
   text-indent: 20px;
-  line-height: 40px;
+  line-height: 60px;
 }
 
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
   color: #000000;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 
 }
 
@@ -144,6 +144,10 @@ body {
   text-decoration: none;
   color: rgb(155, 155, 155);
   background: rgba(255, 255, 255, 0.2);
+  background-color:rgba(156, 178, 187, 0.151);
+  cursor:pointer ;
+  
+  
   
 }
 
@@ -219,7 +223,7 @@ input[type="image"]:focus {
   margin-right: 25px;
 }
 #first-a {
-  margin-top: 30px
+  margin-top: 15px
 }
 
 
