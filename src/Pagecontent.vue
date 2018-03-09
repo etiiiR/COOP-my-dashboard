@@ -1,18 +1,9 @@
  <template>
 <div id="page-content-wrapper">
                 <component v-bind:is="component"></component>
-                  <button v-on:click="component = 'titlecard'">show titlecard</button>
-                  <button v-on:click="component = 'card'">show card</button>
-                  <button v-on:click="component = 'about'">about</button>
-                  <button v-on:click="component = 'dashboard'">Dashboard</button>
-                  <button v-on:click="component = 'contact'">Contact</button>
-                  <button v-on:click="component = 'events'">Events</button>
-                  <button v-on:click="component = 'overview'">overview</button>
-                 <button v-on:click="component = 'service'">Service</button>
-                     <button v-on:click="component = 'shortcuts'">Shortcuts</button>
                 <footer class="footer" id=footer-container>
                 <div class="container">
-                <span class="text-muted">Copyright © 2018 Designed by Etienne Roulet. All rights reserved.</span>
+                <span class="text-muted"> Copyright © 2018 Designed by Etienne Roulet. All rights reserved.</span>
                 </div>
                 </footer>
         </div>            
@@ -29,8 +20,13 @@ import Events from './components/Events.vue'
 import Overview from './components/Overview.vue'
 import Service from './components/Service.vue'
 import Shortcuts from './components/Shortcuts.vue'
+import { mapGetters } from 'vuex'
 
 export default{
+
+
+
+  
   components:{
     'titlecard': Titlecard,
     'card': Card,
@@ -43,15 +39,24 @@ export default{
     'shortcuts': Shortcuts
 
   },
-
   
+
+
+  computed: {
+    component(){
+      return this.$store.state.counter;
+    }
+  },
+
+
   
   data() {
     return {
-      component: 'titlecard'
+    
 
     }
-  }
+  },
+
 }
 </script>
 

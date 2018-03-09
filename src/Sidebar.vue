@@ -5,45 +5,57 @@
                   <a href="#" id="logo"><img src="src\image\Coop.png"></a>
                 </li>
                 <li>
-                    <a  v-on:click="greet" id="first-a" ><img src="src\icons\dashbord.svg" id="image-nav">Dashboard</a>
-                </li>
-    
-                <li>
-                    <a v-on:click="greet"><img src="src\icons\flash-21.svg" id="image-nav">Shortcuts</a>
+                    <a @click="dashboard" id="first-a" ><img src="src\icons\dashbord.svg" id="image-nav">Dashboard</a>
                 </li>
                 <li>
-                    <a  v-on:click="greet"><img src="src\icons\folder-15.svg" id="image-nav">Overview</a>
+                    <a  @click="shortcut"><img src="src\icons\flash-21.svg" id="image-nav">Shortcuts</a>
                 </li>
                 <li>
-                    <a  v-on:click="greet"><img src="src\icons\calendar-60.svg" id="image-nav">Events</a>
+                    <a  @click="overview"><img src="src\icons\folder-15.svg" id="image-nav">Overview</a>
                 </li>
                 <li>
-                    <a  v-on:click="greet"><img src="src\icons\spaceship.svg" id="image-nav">About</a>
+                    <a  @click="events"><img src="src\icons\calendar-60.svg" id="image-nav">Events</a>
                 </li>
                 <li>
-                    <a  v-on:click="greet"><img src="src\icons\preferences.svg" id="image-nav">Services</a>
+                    <a  @click="about"><img src="src\icons\spaceship.svg" id="image-nav">About</a>
                 </li>
                 <li>
-                    <a  v-on:click="greet"><img src="src\icons\like-2.svg" id="image-nav">Contact</a>
+                    <a  @click="service"><img src="src\icons\preferences.svg" id="image-nav">Service</a>
+                </li>
+                <li>
+                    <a  @click="contact"><img src="src\icons\like-2.svg" id="image-nav">Contact</a>
                 </li>
             </ul>
         </div>
 </template>
 
 <script>
-
-
+import { mapMutations }  from 'vuex'
 export default {
-  // define methods under the `methods` object
   methods: {
-    greet: function (event) {
-      // `this` inside methods points to the Vue instance
-      alert('Menüpunkt ' + this.id + '!')
-      // `event` is the native DOM event
-      if (event) {
-        alert(event.target.tagName)
-      }
-    }
+    dashboard() {
+      this.$store.state.counter="dashboard";
+    },
+    shortcut() {
+      this.$store.state.counter="shortcuts";
+    },
+     overview() {
+      this.$store.state.counter="overview";
+    },
+     events() {
+      this.$store.state.counter="events";
+    },
+     about() {
+      this.$store.state.counter="about";
+    },
+     service() {
+      this.$store.state.counter="service";
+    },
+     contact() {
+      this.$store.state.counter="contact";
+    },
+
+
   }
 }
 </script>
@@ -51,12 +63,6 @@ export default {
 
 
 <style>
-/*!
- * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
- */
-
 body {
   overflow-x: hidden;
 }
