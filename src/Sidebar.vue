@@ -95,6 +95,7 @@ body {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   border: solid 1px rgb(240, 240, 240);
+  
 }
 
 #wrapper.active #sidebar-wrapper {
